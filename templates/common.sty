@@ -1,0 +1,53 @@
+% Packages
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}  % proof environment etc.
+\usepackage{enumitem}  % adds label options to enumerate
+\usepackage{fancyhdr}  % header
+\usepackage{lastpage}  % retrieve the total number of pages
+\usepackage{xspace}
+
+% Layout
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+\setlength{\parindent}{0.0in}
+\setlength{\parskip}{0.05in}
+
+% Header
+\pagestyle{fancy}
+\headheight 35pt
+\headsep 1.5em
+\lhead{\student}
+\chead{\textbf{\Large \doctitle}}
+\rhead{\course \\ \today}
+\lfoot{}
+\cfoot{\small \thepage/\pageref*{LastPage}}
+\rfoot{}
+
+% Hyperrefs
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  linkbordercolor={0 0 1}
+}
+
+% Algorithms
+\usepackage[ruled, vlined, linesnumbered, noend, nofillcomment]{algorithm2e}
+% taken from https://tex.stackexchange.com/questions/162207/algorithm2e-comment-style
+\newcommand\commentstyle[1]{\footnotesize\ttfamily\textcolor{blue}{#1}}
+\SetCommentSty{commentstyle}
+\DontPrintSemicolon
+
+% Course information
+\newcommand\course{Course number - Fall 20xx}
+
+% Math notation
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+
+% Utilities
+\newcommand{\yes}{\normalfont\textsf{Yes}\xspace}
+\newcommand{\no}{\normalfont\textsf{No}\xspace}

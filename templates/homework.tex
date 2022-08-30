@@ -1,0 +1,92 @@
+\documentclass[11pt,letterpaper]{article}
+
+%===============================================================================
+%    Student name, etc.
+%===============================================================================
+\newcommand\doctitle{Problem Set 1}
+\newcommand\student{*Insert your name*}
+\newcommand\collaborators{*Insert your collaborators*}
+
+\usepackage{common}
+
+%===============================================================================
+%    Document body
+%===============================================================================
+\begin{document}
+
+Collaborators: \collaborators
+
+%-------------------------------------------------------------------------------
+%    1
+%-------------------------------------------------------------------------------
+\section*{Question 1}
+
+\begin{enumerate}[label=(\alph*)]
+  \item Consider the following algorithm.
+
+  \begin{minipage}{\linewidth}
+    \begin{algorithm}[H]
+      \KwIn{TBD}
+      \KwOut{TBD}
+
+      \BlankLine
+      \tcc{Here's my algorithm.}
+      
+      $y \gets k + 1$\\
+      $z \gets y + x$ \tcp*{This is an inline comment.}
+
+      \For {$i \gets 1$ \KwTo $n$} {
+        \If {$i = y$}{
+          \KwRet \no
+        }
+      }
+
+      \ForEach {$i \in \{1, 2, 3\}$} {
+        Do nothing.
+      }
+
+      \While {$z < x$} {
+        $z \gets z + A[1]$\\
+        $z \gets z + x$
+      }
+
+      \BlankLine
+      \KwRet \yes
+      \caption{TBD}
+    \end{algorithm}
+  \end{minipage}
+
+Explain the algorithm.
+
+  \item Running time analysis.
+\end{enumerate}
+
+%-------------------------------------------------------------------------------
+%    2
+%-------------------------------------------------------------------------------
+\pagebreak
+\section*{Question 2}
+
+\begin{enumerate}[label=(\alph*)]
+  \item Your answer.
+  \item Consider the following algorithm.
+
+  \begin{minipage}{\linewidth}
+    \begin{algorithm}[H]
+      \KwIn{Describe your input.}
+      \KwOut{Describe your output.}
+    
+      \BlankLine
+      \tcc{Here's my algorithm.}
+      Do nothing.
+
+      \caption{Describe your algorithm.}
+    \end{algorithm}
+  \end{minipage}
+    
+  Running time analysis.
+
+  \item Your answer.
+\end{enumerate}
+
+\end{document}

@@ -2,9 +2,7 @@
 
 ### Preliminaries
 
-- Taylor's Theorem: for a smooth function $f: \mathbb{R} \to \mathbb{R}$, $\displaystyle
-f(x)=\sum_{n=0}^N \frac{f^{(n)}(a)}{n!}(x-a)^n + R_N(x)$, where $\displaystyle
-R_N = \frac{f^{(N+1)}(z)}{(N+1)!}(x-a)^{N+1}$ for some $z$ between $x$ and $a$.
+- Taylor's Theorem: for a smooth function $f: \mathbb{R} \to \mathbb{R}$, $\displaystyle f(x)=\sum_{n=0}^N \frac{f^{(n)}(a)}{n!}(x-a)^n + R_N(x)$, where $\displaystyle R_N = \frac{f^{(N+1)}(z)}{(N+1)!}(x-a)^{N+1}$ for some $z$ between $x$ and $a$.
   - (Special case) Maclaurin series: $\displaystyle f(n) = \sum_{n=0}^\infty f^{(n)}(0)\frac{x^n}{n!}$
     - $\displaystyle e^x = \sum_{n=0}^\infty \frac{x^n}{n!} = 1 + \frac{x}{1!} + \frac{x^2}{2!} + \frac{x^3}{3!} + \ldots$
     - When $x=1$, $\displaystyle e = \sum_{n=0}^\infty \frac{1}{n!} = 1 + \frac{1}{1!} + \frac{1}{2!} + \frac{1}{3!} + \ldots$
@@ -47,36 +45,22 @@ Then, $f(x)=\frac{r(r-1)}{2}(1+z)^{r-2} x^2$, and
 Finally, we obtain $f(x) > 0$.
 (Dragoslav S. Mitrinović. *Analytic Inequalities*. 1970, p.34)
 
-**(2)** By Bernoulli's inequality with $-1 \leq -\frac{1}{a} < 0$, we obtain $
-\left(1-\frac{1}{a}\right)^b \geq 1-\frac{b}{a}$. Then, $
-1-\left(1-\frac{1}{a}\right)^b \leq 1-\left(1-\frac{b}{a}\right)=\frac{b}{a}$.
+**(2)** By Bernoulli's inequality with $-1 \leq -\frac{1}{a} < 0$, we obtain $\left(1-\frac{1}{a}\right)^b \geq 1-\frac{b}{a}$. Then, $1-\left(1-\frac{1}{a}\right)^b \leq 1-\left(1-\frac{b}{a}\right)=\frac{b}{a}$.
 
 **(3)** For $x=1$ and $n=p \in \mathbb{N}$, we may use Binomial Theorem.
-$\displaystyle \left(1 + \frac{1}{n}\right)^n = \sum_{k=0}^n \binom{n}{k} \frac{1}{n^k} = 
-   \sum_{k=0}^n \frac{n(n-1)(n-2)\ldots(n-k+1)}{n^k}\cdot \frac{1}{k!}
-   \leq \sum_{k=0}^n \frac{1}{k!} < e$
+$\displaystyle \left(1 + \frac{1}{n}\right)^n = \sum_{k=0}^n \binom{n}{k} \frac{1}{n^k} = \sum_{k=0}^n \frac{n(n-1)(n-2)\ldots(n-k+1)}{n^k}\cdot \frac{1}{k!} \leq \sum_{k=0}^n \frac{1}{k!} < e$
 
-In general, let $F(p)=\left(1+\frac{x}{p}\right)^p$, $
-G(p)=\left(1+\frac{x}{p}\right)^{p+x/2}$, $
-f(p)=\log F(p)$, $
-g(p) =\log G(p)$.
+In general, let $F(p)=\left(1+\frac{x}{p}\right)^p$, $G(p)=\left(1+\frac{x}{p}\right)^{p+x/2}$, $f(p)=\log F(p)$, $g(p) =\log G(p)$.
 
 First, notice the following limits:
-- $
-\displaystyle \lim_{p\to\infty}
-F(p)=\lim_{t\to\infty}\left(1 + \frac{1}{t}\right)^{tx}= e^x$
-- $
-\displaystyle \lim_{p\to\infty}
-G(p)=\lim_{p\to\infty}F(p)\left(1+\frac{x}{p}\right)^{x/2}
-=\lim_{p\to\infty}F(p)\cdot 1=e^x$
+- $\displaystyle \lim_{p\to\infty} F(p)=\lim_{t\to\infty}\left(1 + \frac{1}{t}\right)^{tx}= e^x$
+- $\displaystyle \lim_{p\to\infty} G(p)=\lim_{p\to\infty}F(p)\left(1+\frac{x}{p}\right)^{x/2}=\lim_{p\to\infty}F(p)\cdot 1=e^x$
 
 It is sufficient to prove that $F$ is an increasing and $G$ is a decreasing function of $p$, both for $p>0$. This is equivalent to the assertion that $f$ is an increasing and $g$ a decreasing function, both for $p>0$.
 
 Let $y(p)=\log\left(1+\frac{x}{p}\right)$. Then,
-- $
-y'(p)=\left[\log(p+x) - \log(p)\right]'=\frac{1}{p+x} - \frac{1}{p}=\frac{-x}{p(p+x)}$
-- $
-y''(p)=\frac{x\left[p(p+x)\right]'}{\left(p(p+x)\right)^2}=\frac{2xp+x^2}{p^2(p+x)^2}$.
+- $y'(p)=\left[\log(p+x) - \log(p)\right]'=\frac{1}{p+x} - \frac{1}{p}=\frac{-x}{p(p+x)}$
+- $y''(p)=\frac{x\left[p(p+x)\right]'}{\left(p(p+x)\right)^2}=\frac{2xp+x^2}{p^2(p+x)^2}$.
 
 By differentiation we get:
 - $f'(p)=[p\cdot y(p)]'=p\cdot y'(p)+y(p)$

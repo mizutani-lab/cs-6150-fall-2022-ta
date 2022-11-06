@@ -2,7 +2,7 @@
 
 ### Preliminaries
 
-- Taylor's Theorem: for a smooth function $f: \mathbb{R} \to \mathbb{R}$, $\displaystyle f(x)=\sum_{n=0}^N \frac{f^{(n)}(a)}{n!}(x-a)^n + R_N(x)$, where $\displaystyle R_N = \frac{f^{(N+1)}(z)}{(N+1)!}(x-a)^{N+1}$ for some $z$ between $x$ and $a$.
+- Taylor's Theorem: for a smooth function $f: \mathbb{R} \to \mathbb{R}$, $\displaystyle f(x)=\sum_{n=0}^N \frac{f^{(n)}(a)}{n!}(x-a)^n + R_N(x)$, where $\displaystyle R_N(x) = \frac{f^{(N+1)}(z)}{(N+1)!}(x-a)^{N+1}$ for some $z$ between $x$ and $a$.
   - (Special case) Maclaurin series: $\displaystyle f(n) = \sum_{n=0}^\infty f^{(n)}(0)\frac{x^n}{n!}$
     - $\displaystyle e^x = \sum_{n=0}^\infty \frac{x^n}{n!} = 1 + \frac{x}{1!} + \frac{x^2}{2!} + \frac{x^3}{3!} + \ldots$
     - When $x=1$, $\displaystyle e = \sum_{n=0}^\infty \frac{1}{n!} = 1 + \frac{1}{1!} + \frac{1}{2!} + \frac{1}{3!} + \ldots$
@@ -20,7 +20,7 @@
 
 - **(1)** Prove Bernoulli's inequality using Taylor's Theorem.
 - **(2)** Show $1-\left(1-\frac{1}{a}\right)^b \leq \frac{b}{a}$ for $a,b \geq 1$.
-- **(3)** Show $\left(1 + \frac{x}{p}\right)^p < e^x < \left(1 + \frac{x}{p}\right)^{p+x/2}$ for $x, p > 0$
+- **(3)** Show $\left(1 + \frac{x}{p}\right)^p < e^x < \left(1 + \frac{x}{p}\right)^{p+x/2}$ for $x, p > 0$.
 - **(4)** Show $\left(1 - \frac{1}{x}\right)^{x} < \frac{1}{e} < \left(1 - \frac{1}{x}\right)^{x-1}$ for $x > 1$.
 
 ----
@@ -34,12 +34,12 @@ When $x=0$ or $r=1$, the equality holds. Otherwise, from Taylor's theorem, there
 We have:
 - $f(0)=0$
 - $f'(x) = r(1+x)^{r-1}-r \Longrightarrow f'(0)=0$
-- $f''(x) = r(r-1)(1+x)^{r-2}$ as $r \neq 1$.
+- $f''(x) = r(r-1)(1+x)^{r-2}$ as $r \neq 1$
 
 Then, $f(x)=\frac{r(r-1)}{2}(1+z)^{r-2} x^2$, and 
 - $r > 1 \Longrightarrow \frac{r(r-1)}{2}>0$
 - $z > -1  \Longrightarrow (1+z)^{r-2}>0$
-- $x \neq 0 \Longrightarrow x^2 > 0$.
+- $x \neq 0 \Longrightarrow x^2 > 0$
 
 Finally, we obtain $f(x) > 0$.
 (Dragoslav S. Mitrinović. *Analytic Inequalities*. 1970, p.34)
@@ -59,7 +59,7 @@ It is sufficient to prove that $F$ is an increasing and $G$ is a decreasing func
 
 Let $y(p)=\log\left(1+\frac{x}{p}\right)$. Then,
 - $y'(p)=\left[\log(p+x) - \log(p)\right]'=\frac{1}{p+x} - \frac{1}{p}=\frac{-x}{p(p+x)}$
-- $y''(p)=\frac{x\left[p(p+x)\right]'}{\left(p(p+x)\right)^2}=\frac{2xp+x^2}{p^2(p+x)^2}$.
+- $y''(p)=\frac{x\left[p(p+x)\right]'}{\left(p(p+x)\right)^2}=\frac{2xp+x^2}{p^2(p+x)^2}$
 
 By differentiation we get:
 - $f'(p)=[p\cdot y(p)]'=p\cdot y'(p)+y(p)$

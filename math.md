@@ -18,10 +18,10 @@
 
 ### Exercises
 
-**(1)** Prove Bernoulli's inequality using Taylor's Theorem.
-**(2)** Show $1-\left(1-\frac{1}{a}\right)^b \leq \frac{b}{a}$ for $a,b \geq 1$.
-**(3)** Show $\left(1 + \frac{x}{p}\right)^p < e^x < \left(1 + \frac{x}{p}\right)^{p+x/2}$ for $x, p > 0$
-**(4)** Show $\left(1 - \frac{1}{x}\right)^{x} < \frac{1}{e} < \left(1 - \frac{1}{x}\right)^{x-1}$ for $x > 1$.
+- **(1)** Prove Bernoulli's inequality using Taylor's Theorem.
+- **(2)** Show $1-\left(1-\frac{1}{a}\right)^b \leq \frac{b}{a}$ for $a,b \geq 1$.
+- **(3)** Show $\left(1 + \frac{x}{p}\right)^p < e^x < \left(1 + \frac{x}{p}\right)^{p+x/2}$ for $x, p > 0$
+- **(4)** Show $\left(1 - \frac{1}{x}\right)^{x} < \frac{1}{e} < \left(1 - \frac{1}{x}\right)^{x-1}$ for $x > 1$.
 
 ----
 
@@ -29,8 +29,7 @@
 
 **(1)** Let $f(x)=(1+x)^r - 1-rx$. We want to show $f(x) \geq 0$ for any $x \geq -1, r \geq 1$.
 
-When $x=0$ or $r=1$, the equality holds. Otherwise, from Taylor's theorem, there exists $z \in (\min(0,x), \max(0,x))$ such that $
-f(x)=f(0) + f'(0)x+\frac{f''(z)}{2}x^2$.
+When $x=0$ or $r=1$, the equality holds. Otherwise, from Taylor's theorem, there exists $z \in (\min(0,x), \max(0,x))$ such that $f(x)=f(0) + f'(0)x+\frac{f''(z)}{2}x^2$.
 
 We have:
 - $f(0)=0$
@@ -73,8 +72,6 @@ Knowing that $\displaystyle \lim_{p\to\infty} f'(p) = \lim_{p\to\infty} g'(p)=0$
 
 **(4)** This is a direct result of $\left(1 + \frac{1}{x}\right)^x < e < \left(1 + \frac{1}{x}\right)^{x+1}$ for $x>0$.
 
-Since $1+\frac{1}{x}=\frac{x+1}{x}$, we have $\left(\frac{x+1}{x}\right)^x < e < \left(\frac{x+1}{x}\right)^{x+1}
-\Longrightarrow \left(\frac{x}{x+1}\right)^x > \frac{1}{e} > \left(\frac{x}{x+1}\right)^{x+1}
-\Longrightarrow \left(1-\frac{1}{x+1}\right)^x > \frac{1}{e} > \left(1-\frac{1}{x+1}\right)^{x+1}$.
+Since $1+\frac{1}{x}=\frac{x+1}{x}$, we have $\left(\frac{x+1}{x}\right)^x < e < \left(\frac{x+1}{x}\right)^{x+1} \Longrightarrow \left(\frac{x}{x+1}\right)^x > \frac{1}{e} > \left(\frac{x}{x+1}\right)^{x+1} \Longrightarrow \left(1-\frac{1}{x+1}\right)^x > \frac{1}{e} > \left(1-\frac{1}{x+1}\right)^{x+1}$.
 
 Then, $\left(1-\frac{1}{x}\right)^{x-1} > \frac{1}{e} > \left(1-\frac{1}{x}\right)^{x}$ for $x>1$.
